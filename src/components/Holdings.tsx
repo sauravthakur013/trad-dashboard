@@ -7,7 +7,7 @@ const Holdings = () => {
 
   const getHoldings = async () => {
     try {
-      const response: any = await httpGet("api/getHoldings");
+      const response: any = await httpGet({path : "api/getHoldings"});
       console.log(response);
       setHoldings(response.data);
     } catch (error) {

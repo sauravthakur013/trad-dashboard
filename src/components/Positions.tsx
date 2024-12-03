@@ -7,7 +7,7 @@ const Positions = () => {
 
   const getPositions = async () => {
     try {
-      const response: any = await httpGet("api/getPositions");
+      const response: any = await httpGet({path : "api/getPositions"});
       setPositions(response.data);
     } catch (error) {
       console.log(error);
